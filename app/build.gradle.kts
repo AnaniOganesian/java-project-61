@@ -10,6 +10,10 @@ application {
 
 }
 
+tasks.getByName("run", JavaExec::class) {
+    standardInput = System.`in`
+}
+
 group = "hexlet.code"
 version = "1.0-SNAPSHOT"
 
