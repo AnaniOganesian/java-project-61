@@ -38,3 +38,4 @@ sonar {
         property("sonar.projectKey", "AnaniOganesian_java-project-61")
         property("sonar.organization", "ananioganesian")
     }
+}
