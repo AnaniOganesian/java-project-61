@@ -2,7 +2,7 @@ plugins {
     id("java")
     application
     id("com.github.ben-manes.versions") version "0.53.0"
-
+    id("org.sonarqube") version "7.1.0.6387"
 }
 
 application {
@@ -30,4 +30,11 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+sonar {
+    properties {
+        property("sonar.projectKey", "AnaniOganesian_java-project-61")
+        property("sonar.organization", "ananioganesian")
+    }
 }
