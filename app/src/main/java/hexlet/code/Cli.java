@@ -7,10 +7,9 @@ public class Cli {
     public static void getName() {
         // Создаем объект класса сканнер, который считывает введеный текст
         Scanner scanner = new Scanner(System.in);
-
         System.out.print("May I have your name? ");
         // Ввод имени
-        String name = scanner.nextLine();
+        String name = scanner.nextLine().trim();
 
         System.out.println("Hello, " + name + "!");
         scanner.close();
