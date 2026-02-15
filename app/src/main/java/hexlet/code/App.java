@@ -12,6 +12,8 @@ public class App {
         // Вводим выборку через класс Scanner
         Scanner scanner = new Scanner(System.in);
 
+
+        System.out.print("Your choice: ");
         int choice = scanner.nextInt(); // ввод выбора
         scanner.nextLine();
 
