@@ -1,7 +1,5 @@
 package hexlet.code.games;
-
 import hexlet.code.Engine;
-
 import java.util.Random;
 import java.util.Scanner;
 
@@ -16,7 +14,7 @@ public class Even {
 
         engine.greeting();
         Random random = new Random();
-        int noOfCorrectAnswers = engine.getNoOfCorrectAnswers();
+        int noOfCorrectAnswers = 0;
 
         while (noOfCorrectAnswers < engine.getNoOfRounds()) {
             int number = random.nextInt(maxNumber) + 1;  //

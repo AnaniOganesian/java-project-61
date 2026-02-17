@@ -32,7 +32,7 @@ public class App {
                 break;
             case 3:
                 System.out.println("Welcome to the Brain Games!");
-               // Calc.calcGame(scanner);
+               Calc.calcGame(scanner);
                 break;
             case 0:
                 System.out.println("Goodbye!");
