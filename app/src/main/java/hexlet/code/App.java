@@ -2,6 +2,7 @@ package hexlet.code;
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
 import hexlet.code.games.GCD;
+import hexlet.code.games.Progression;
 
 import java.util.Scanner; // испортировали сканнер для ввода текста
 
@@ -14,6 +15,7 @@ public class App {
         System.out.println("2 - Even");
         System.out.println("3 - Calc");
         System.out.println("4 - GCD");
+        System.out.println("5 - Progression");
         System.out.println("0 - Exit");
         // Вводим выборку через класс Scanner
         Scanner scanner = new Scanner(System.in);
@@ -25,20 +27,19 @@ public class App {
 
         switch (choice) {
             case 1:
-                System.out.println("Welcome to the Brain Games!");
                 Cli.getName();
                 break;
             case 2:
-                System.out.println("Welcome to the Brain Games!");
                 Even.evenGame(scanner);
                 break;
             case 3:
-                System.out.println("Welcome to the Brain Games!");
                 Calc.calcGame(scanner);
                 break;
             case 4:
-                System.out.println("Welcome to the Brain Games!");
                 GCD.NODGame(scanner);
+                break;
+            case 5:
+                Progression.PrgGame(scanner);
                 break;
             case 0:
                 System.out.println("Goodbye!");
