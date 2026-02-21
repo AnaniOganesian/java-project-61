@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public final class Engine {
     @SuppressWarnings("MagicNumber")
-    private static final int noOfRounds = 3;
+    private static final int NUMBER_OF_ROUNDS = 3;
     private final Scanner scanner;
     private String playerName;
     private final String gameDescription;
@@ -16,7 +16,7 @@ public final class Engine {
 
     }
     public int getNoOfRounds() {
-        return noOfRounds;
+        return NUMBER_OF_ROUNDS;
     }
     public String getPlayerName() {
         return playerName;

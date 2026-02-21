@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Even {
     // задался максимальным числом, чтобы было проще
     @SuppressWarnings("MagicNumber")
-    private static final int maxNumber = 100;
+    private static final int MAX_NUMBER = 100;
 
     public static void evenGame(Scanner scanner) {
         // int noOfRounds = 3;
@@ -20,7 +20,7 @@ public class Even {
         int noOfCorrectAnswers = 0;
 
         while (noOfCorrectAnswers < engine.getNoOfRounds()) {
-            int number = random.nextInt(maxNumber) + 1;  //
+            int number = random.nextInt(MAX_NUMBER) + 1;  //
             String correctAnswer = isEven(number) ? "yes" : "no";
 
             if (engine.getQuestions(String.valueOf(number), correctAnswer)) {

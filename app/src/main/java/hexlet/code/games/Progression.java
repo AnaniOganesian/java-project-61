@@ -8,11 +8,11 @@ import java.util.Scanner;
 
 public class Progression {
     @SuppressWarnings("MagicNumber")
-    private static final Random random = new Random();
+    private static final Random RANDOM_NUMBER = new Random();
     // задался минимумом равным 5 по условию задачи
-    private static final int minPrgLength = 5;
+    private static final int MIN_PRG_LENGTH = 5;
     // задался максимумом равным 10 по условию задачи
-    private static final int maxPrgLength = 10;
+    private static final int MAX_PRG_LENGTH = 10;
 
 
     public static void prgGame(Scanner scanner) {
@@ -23,9 +23,9 @@ public class Progression {
         int noOfCorrectAnswers = 0;
         // выбираем случайное число в зависимости от длины массива
         while (noOfCorrectAnswers < engine.getNoOfRounds()) {
-            int progressionLength = random.nextInt(maxPrgLength - minPrgLength + 1)
-                    + minPrgLength;
-            int hiddenNumber = random.nextInt(progressionLength - 1) + 1;
+            int progressionLength = RANDOM_NUMBER.nextInt(MAX_PRG_LENGTH - MIN_PRG_LENGTH + 1)
+                    + MIN_PRG_LENGTH;
+            int hiddenNumber = RANDOM_NUMBER.nextInt(progressionLength - 1) + 1;
 
             int[] arrays = progressionMaker(progressionLength);
             String[] stringArray = new String[arrays.length];
@@ -51,10 +51,9 @@ public class Progression {
     //
     public static int[] progressionMaker(int progressionLength) {
 
-        @SuppressWarnings("MagicNumber")
-        int difference = random.nextInt(5) + 2; // число для создания прогрессии, разницв текущим и следующим
+        int difference = RANDOM_NUMBER.nextInt(MIN_PRG_LENGTH) + 2; // число для создания прогрессии, разницв текущим и следующим
         int[] arrays = new int[progressionLength];
-        arrays[0] = random.nextInt(10); // принял условие, что числа в прогрессии с 0 до 10;
+        arrays[0] = RANDOM_NUMBER.nextInt(MAX_PRG_LENGTH); // принял условие, что числа в прогрессии с 0 до 10;
         for (int i = 1; i < arrays.length; i++) {
             arrays[i] = arrays[i - 1] + difference;
         }

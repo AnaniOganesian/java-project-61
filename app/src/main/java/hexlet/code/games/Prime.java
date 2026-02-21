@@ -9,7 +9,7 @@ public class Prime {
     // задался максимальным числом, чтобы было проще
     @SuppressWarnings("MagicNumber")
     private static final int MAX_NUMBER = 100;
-
+    private static final int PRIME_CHECK_MIN_NUMBER = 3;
     public static void primeGame(Scanner scanner) {
         Engine engine = new Engine(scanner, "Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         engine.greeting();
@@ -52,7 +52,7 @@ public class Prime {
 
         int sqrt = (int) Math.sqrt(number);
 
-        for (int i = 3; i <= sqrt; i += 2) {
+        for (int i = PRIME_CHECK_MIN_NUMBER; i <= sqrt; i += 2) {
             if (number % i == 0) {
                 return false;
             }

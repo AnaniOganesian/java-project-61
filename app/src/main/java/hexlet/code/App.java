@@ -9,8 +9,14 @@ import java.util.Scanner; // испортировали сканнер для в
 
 
 public class App {
-    @SuppressWarnings("MagicNumber")
 
+    private static final String GREET = "1";
+    private static final String EVEN = "2";
+    private static final String CALC = "3";
+    private static final String GCDGAME = "4";
+    private static final String PROGRESSION = "5";
+    private static final String PRIME = "6";
+    private static final String EXIT = "0";
     public static void main(String[] args) {
         // Просим выбрать игру (в т.ч. приветствие), выводим список игр или выходим
         System.out.println("Welcome to the Brain Games!");
@@ -27,29 +33,28 @@ public class App {
 
 
         System.out.print("Your choice: ");
-        int choice = scanner.nextInt(); // ввод выбора
-        scanner.nextLine();
+        String choice = scanner.nextLine(); // ввод выбора
 
         switch (choice) {
-            case 1:
+            case GREET:
                 Cli.getName();
                 break;
-            case 2:
+            case EVEN:
                 Even.evenGame(scanner);
                 break;
-            case 3:
+            case CALC:
                 Calc.calcGame(scanner);
                 break;
-            case 4:
+            case GCDGAME:
                 GCD.nodGame(scanner);
                 break;
-            case 5:
+            case PROGRESSION:
                 Progression.prgGame(scanner);
                 break;
-            case 6:
+            case PRIME:
                 Prime.primeGame(scanner);
                 break;
-            case 0:
+            case EXIT:
                 System.out.println("Goodbye!");
                 break;
             default:
