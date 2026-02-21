@@ -22,8 +22,7 @@ public class Even {
 
             if (engine.getQuestions(String.valueOf(number), correctAnswer)) {
                 noOfCorrectAnswers++;
-            }
-            else {
+            } else {
                 return;
             }
 

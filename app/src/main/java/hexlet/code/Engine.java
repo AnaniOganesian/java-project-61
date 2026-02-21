@@ -24,7 +24,7 @@ public class Engine {
         return noOfCorrectAnswers;
     }
 
-    public void greeting(){
+    public void greeting() {
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
         // Ввод имени
@@ -36,7 +36,7 @@ public class Engine {
     }
 // Задаем основную логику игры. Задается вопрос, принимается ответ. Если ответ правильный, то увеличиваем
 // счечик. Если нет, то заканчиваем игру.
-    public boolean getQuestions(String question, String answer){
+    public boolean getQuestions(String question, String answer) {
         System.out.println("Question: " + question);
         System.out.print("Your answer: ");
         String userAnswer = scanner.nextLine().trim().toLowerCase();
@@ -53,5 +53,5 @@ public class Engine {
 
 
     }
-    }
+}
 

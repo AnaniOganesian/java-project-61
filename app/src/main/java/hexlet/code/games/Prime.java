@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Prime {
 
-    public static void primeGame(Scanner scanner){
+    public static void primeGame(Scanner scanner) {
         Engine engine = new Engine(scanner, "Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         engine.greeting();
 
@@ -23,8 +23,7 @@ public class Prime {
 
             if (engine.getQuestions(question, correctAnswer)) {
                 noOfCorrectAnswers++;
-            }
-            else {
+            } else {
                 return;
             }
 
@@ -34,7 +33,7 @@ public class Prime {
 
     }
 
-    public static boolean isPrime(int number){
+    public static boolean isPrime(int number) {
 
         if (number == 2) {
             return true;
@@ -44,14 +43,14 @@ public class Prime {
             return false;
         }
 
-        if (number % 2 == 0){
+        if (number % 2 == 0) {
             return false;
         }
 
         int sqrt = (int) Math.sqrt(number);
 
-        for (int i = 3; i < sqrt; i+=2){
-            if (number % i == 0){
+        for (int i = 3; i < sqrt; i += 2) {
+            if (number % i == 0) {
                 return false;
             }
         }

@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class GCD {
 
-    public static void NODGame(Scanner scanner){
+    public static void nodGame(Scanner scanner) {
         Engine engine = new Engine(scanner, "Find the greatest common divisor of given numbers.");
         engine.greeting();
         int maxNumber = 100;
@@ -23,8 +23,7 @@ public class GCD {
 
             if (engine.getQuestions(question, String.valueOf(result))) {
                 noOfCorrectAnswers++;
-            }
-            else {
+            } else {
                 return;
             }
 
@@ -36,7 +35,7 @@ public class GCD {
         int a = firstNumber;
         int b = secondNumber;
 
-        if (b == 0){
+        if (b == 0) {
             return a;
         }
 
