@@ -49,7 +49,7 @@ public class Prime {
 
         int sqrt = (int) Math.sqrt(number);
 
-        for (int i = 3; i < sqrt; i += 2) {
+        for (int i = 3; i <= sqrt; i += 2) {
             if (number % i == 0) {
                 return false;
             }
