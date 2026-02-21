@@ -51,7 +51,7 @@ public class Progression {
     //
     public static int[] progressionMaker(int progressionLength) {
 
-        int difference = RANDOM_NUMBER.nextInt(MIN_PRG_LENGTH) + 2; // число для создания прогрессии, разницв текущим и следующим
+        int difference = RANDOM_NUMBER.nextInt(MIN_PRG_LENGTH) + 2;
         int[] arrays = new int[progressionLength];
         arrays[0] = RANDOM_NUMBER.nextInt(MAX_PRG_LENGTH); // принял условие, что числа в прогрессии с 0 до 10;
         for (int i = 1; i < arrays.length; i++) {
