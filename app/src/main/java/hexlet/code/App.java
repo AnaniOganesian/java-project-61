@@ -11,6 +11,7 @@ import java.util.Scanner; // испортировали сканнер для в
 public class App {
     public static void main(String[] args) {
         // Просим выбрать игру (в т.ч. приветствие), выводим список игр или выходим
+
         System.out.println("Please enter the game number and press Enter");
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
