@@ -4,11 +4,15 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Calc {
+    @SuppressWarnings("MagicNumber")
+    // задался максимальным числом, чтобы было проще
+    private static final int MAX_NUMBER = 100;
+
     public static void calcGame(Scanner scanner) {
         Engine engine = new Engine(scanner, "What is the result of the expression?");
         // задался максимальным числом, чтобы было проще
-        @SuppressWarnings("MagicNumber")
-        int maxNumber = 100;
+
+
         engine.greeting();
         Random random = new Random();
 
@@ -16,8 +20,8 @@ public class Calc {
         int noOfCorrectAnswers = 0;
 // В цикле каждый раз выбираем новые числа и операцию, которую нужно произвести
         while (noOfCorrectAnswers < engine.getNoOfRounds()) {
-            int firstNumber = random.nextInt(maxNumber) + 1;
-            int secondNumber = random.nextInt(maxNumber) + 1;
+            int firstNumber = random.nextInt(MAX_NUMBER) + 1;
+            int secondNumber = random.nextInt(MAX_NUMBER) + 1;
             int operationNumber = random.nextInt(2) + 1;
 
             String mathOperation = mathoper[operationNumber];

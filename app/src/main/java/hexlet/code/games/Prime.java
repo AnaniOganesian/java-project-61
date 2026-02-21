@@ -6,6 +6,9 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Prime {
+    // задался максимальным числом, чтобы было проще
+    @SuppressWarnings("MagicNumber")
+    private static final int MAX_NUMBER = 100;
 
     public static void primeGame(Scanner scanner) {
         Engine engine = new Engine(scanner, "Answer 'yes' if given number is prime. Otherwise answer 'no'.");
@@ -16,7 +19,7 @@ public class Prime {
         int noOfCorrectAnswers = 0;
 
         while (noOfCorrectAnswers < engine.getNoOfRounds()) {
-            int number = random.nextInt(100);
+            int number = random.nextInt(MAX_NUMBER);
 
             String question = String.valueOf(number);
             String correctAnswer = isPrime(number) ? "yes" : "no";

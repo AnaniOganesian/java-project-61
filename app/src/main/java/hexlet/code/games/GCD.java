@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class GCD {
     // задался максимальным числом, чтобы было проще
     @SuppressWarnings("MagicNumber")
-    private static final int maxNumber = 100;
+    private static final int MAX_NUMBER = 100;
 
     public static void nodGame(Scanner scanner) {
         Engine engine = new Engine(scanner, "Find the greatest common divisor of given numbers.");
@@ -18,8 +18,8 @@ public class GCD {
 
         int noOfCorrectAnswers = 0;
         while (noOfCorrectAnswers < engine.getNoOfRounds()) {
-            int firstNumber = random.nextInt(maxNumber);
-            int secondNumber = random.nextInt(maxNumber);
+            int firstNumber = random.nextInt(MAX_NUMBER);
+            int secondNumber = random.nextInt(MAX_NUMBER);
 
             String question = firstNumber + " " + secondNumber;
             int result = findNod(firstNumber, secondNumber);

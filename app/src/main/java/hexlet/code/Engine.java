@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public final class Engine {
     @SuppressWarnings("MagicNumber")
-    private static int noOfRounds = 3;
-    private Scanner scanner;
+    private static final int noOfRounds = 3;
+    private final Scanner scanner;
     private String playerName;
-    private String gameDescription;
+    private final String gameDescription;
     //private int noOfCorrectAnswers = 0;
 
     public Engine(Scanner sc, String description) {

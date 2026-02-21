@@ -7,13 +7,12 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Progression {
-    private static Random random = new Random();
+    @SuppressWarnings("MagicNumber")
+    private static final Random random = new Random();
     // задался минимумом равным 5 по условию задачи
-    @SuppressWarnings("MagicNumber")
-    private static int minPrgLength = 5;
+    private static final int minPrgLength = 5;
     // задался максимумом равным 10 по условию задачи
-    @SuppressWarnings("MagicNumber")
-    private static int maxPrgLength = 10;
+    private static final int maxPrgLength = 10;
 
 
     public static void prgGame(Scanner scanner) {
