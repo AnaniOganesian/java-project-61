@@ -1,8 +1,5 @@
 package hexlet.code;
-import hexlet.code.games.Calc;
-import hexlet.code.games.Even;
-import hexlet.code.games.GCD;
-import hexlet.code.games.Progression;
+import hexlet.code.games.*;
 
 import java.util.Scanner; // испортировали сканнер для ввода текста
 
@@ -16,6 +13,7 @@ public class App {
         System.out.println("3 - Calc");
         System.out.println("4 - GCD");
         System.out.println("5 - Progression");
+        System.out.println("6 - Prime");
         System.out.println("0 - Exit");
         // Вводим выборку через класс Scanner
         Scanner scanner = new Scanner(System.in);
@@ -39,7 +37,10 @@ public class App {
                 GCD.NODGame(scanner);
                 break;
             case 5:
-                Progression.PrgGame(scanner);
+                Progression.prgGame(scanner);
+                break;
+            case 6:
+                Prime.primeGame(scanner);
                 break;
             case 0:
                 System.out.println("Goodbye!");

@@ -32,7 +32,7 @@ public class Engine {
 
         System.out.println("Hello, " + playerName + "!");
         System.out.println(gameDescription);
-        // scanner.close();
+
     }
 // Задаем основную логику игры. Задается вопрос, принимается ответ. Если ответ правильный, то увеличиваем
 // счечик. Если нет, то заканчиваем игру.

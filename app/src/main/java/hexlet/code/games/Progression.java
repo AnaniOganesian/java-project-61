@@ -10,7 +10,7 @@ public class Progression {
     static Random random = new Random();
     public static int count = random.nextInt(6) + 5; // от 5 до 10 длина массива
 
-    public static void PrgGame(Scanner scanner){
+    public static void prgGame(Scanner scanner){
         Engine engine = new Engine(scanner, "What number is missing in the progression?");
         engine.greeting();
 
