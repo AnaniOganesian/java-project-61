@@ -6,11 +6,14 @@ import java.util.Scanner;
 
 
 public class Even {
+    // задался максимальным числом, чтобы было проще
+    @SuppressWarnings("MagicNumber")
+    private static final int maxNumber = 100;
 
     public static void evenGame(Scanner scanner) {
         // int noOfRounds = 3;
         Engine engine = new Engine(scanner, "Answer 'yes' if the number is even, otherwise answer 'no'.");
-        int maxNumber = 100;
+
 
         engine.greeting();
         Random random = new Random();

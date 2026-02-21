@@ -2,16 +2,17 @@ package hexlet.code;
 
 import java.util.Scanner;
 
-public class Engine {
+public final class Engine {
+    @SuppressWarnings("MagicNumber")
     private static int noOfRounds = 3;
     private Scanner scanner;
     private String playerName;
     private String gameDescription;
-    private int noOfCorrectAnswers = 0;
+    //private int noOfCorrectAnswers = 0;
 
-    public Engine(Scanner scanner, String gameDescription) {
-        this.scanner = scanner;
-        this.gameDescription = gameDescription;
+    public Engine(Scanner sc, String description) {
+        this.scanner = sc;
+        this.gameDescription = description;
 
     }
     public int getNoOfRounds() {
@@ -19,9 +20,6 @@ public class Engine {
     }
     public String getPlayerName() {
         return playerName;
-    }
-    public int getNoOfCorrectAnswers() {
-        return noOfCorrectAnswers;
     }
 
     public void greeting() {

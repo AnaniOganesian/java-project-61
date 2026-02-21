@@ -9,6 +9,7 @@ import java.util.Scanner; // испортировали сканнер для в
 
 
 public class App {
+    @SuppressWarnings("MagicNumber")
     public static void main(String[] args) {
         // Просим выбрать игру (в т.ч. приветствие), выводим список игр или выходим
         System.out.println("Welcome to the Brain Games!");

@@ -6,6 +6,8 @@ import java.util.Scanner;
 public class Calc {
     public static void calcGame(Scanner scanner) {
         Engine engine = new Engine(scanner, "What is the result of the expression?");
+        // задался максимальным числом, чтобы было проще
+        @SuppressWarnings("MagicNumber")
         int maxNumber = 100;
         engine.greeting();
         Random random = new Random();

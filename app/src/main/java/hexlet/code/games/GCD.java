@@ -6,11 +6,14 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class GCD {
+    // задался максимальным числом, чтобы было проще
+    @SuppressWarnings("MagicNumber")
+    private static final int maxNumber = 100;
 
     public static void nodGame(Scanner scanner) {
         Engine engine = new Engine(scanner, "Find the greatest common divisor of given numbers.");
         engine.greeting();
-        int maxNumber = 100;
+
         Random random = new Random();
 
         int noOfCorrectAnswers = 0;
