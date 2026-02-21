@@ -22,7 +22,7 @@ public class Progression {
         while (noOfCorrectAnswers < engine.getNoOfRounds()) {
             int progressionLength = random.nextInt(maxPrgLength - minPrgLength + 1)
                     + minPrgLength;
-            int hiddenNumber = random.nextInt(progressionLength - random.nextInt(4));
+            int hiddenNumber = random.nextInt(progressionLength - random.nextInt(4) + 1);
 
             int[] arrays = progressionMaker(progressionLength);
             String[] stringArray = new String[arrays.length];
