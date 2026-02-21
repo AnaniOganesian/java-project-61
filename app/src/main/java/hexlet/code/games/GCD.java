@@ -28,7 +28,7 @@ public class GCD {
             }
 
         }
-
+        System.out.println("Congratulations, " + engine.getPlayerName() + "!");
     }
 
     private static int findNod(int firstNumber, int secondNumber) {
