@@ -12,6 +12,7 @@ public class Progression {
     // задался максимумом равным 10 по условию задачи
     private static final int MAX_PRG_LENGTH = 10;
     private static final int ROUNDS = 3;
+    private static final int MAX_NUMBER = 100;
 
 
     public static void prgGame() {
@@ -29,7 +30,7 @@ public class Progression {
                     + MIN_PRG_LENGTH;
             int hiddenIndex = RANDOM_NUMBER.nextInt(length - 1) + 1;
             int step = RANDOM_NUMBER.nextInt(MIN_PRG_LENGTH) + 2;
-            int firstNumber = RANDOM_NUMBER.nextInt(100);
+            int firstNumber = RANDOM_NUMBER.nextInt(MAX_NUMBER);
 
             String[] progression = makeProgression(firstNumber, step, length);
             String correctAnswer = progression[hiddenIndex];
