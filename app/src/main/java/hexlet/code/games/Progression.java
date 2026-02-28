@@ -15,8 +15,8 @@ public class Progression {
     private static final int MAX_PRG_LENGTH = 10;
 
 
-    public static void prgGame(Scanner scanner) {
-        Engine engine = new Engine(scanner, "What number is missing in the progression?");
+    public static void prgGame() {
+        Engine engine = new Engine( "What number is missing in the progression?");
         engine.greeting();
 
         //Random random = new Random(); убрано по результатам checkstyle

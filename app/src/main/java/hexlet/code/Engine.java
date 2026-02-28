@@ -5,13 +5,12 @@ import java.util.Scanner;
 public final class Engine {
     @SuppressWarnings("MagicNumber")
     private static final int NUMBER_OF_ROUNDS = 3;
-    private final Scanner scanner;
+    private final Scanner scanner = new Scanner(System.in);
     private String playerName;
     private final String gameDescription;
     //private int noOfCorrectAnswers = 0;
 
-    public Engine(Scanner sc, String description) {
-        this.scanner = sc;
+    public Engine(String description) {
         this.gameDescription = description;
 
     }

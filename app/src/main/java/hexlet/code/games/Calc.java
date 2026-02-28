@@ -8,8 +8,8 @@ public class Calc {
     // задался максимальным числом, чтобы было проще
     private static final int MAX_NUMBER = 100;
 
-    public static void calcGame(Scanner scanner) {
-        Engine engine = new Engine(scanner, "What is the result of the expression?");
+    public static void calcGame() {
+        Engine engine = new Engine( "What is the result of the expression?");
         // задался максимальным числом, чтобы было проще
 
 

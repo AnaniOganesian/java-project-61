@@ -33,32 +33,32 @@ public class App {
 
 
         System.out.print("Your choice: ");
-        String choice = scanner.nextLine(); // ввод выбора
+        String userChoice = scanner.nextLine(); // ввод выбора
 
-        switch (choice) {
+        switch (userChoice) {
             case GREET:
                 Cli.getName();
                 break;
             case EVEN:
-                Even.evenGame(scanner);
+                Even.evenGame();
                 break;
             case CALC:
-                Calc.calcGame(scanner);
+                Calc.calcGame();
                 break;
             case GCDGAME:
-                GCD.nodGame(scanner);
+                GCD.nodGame();
                 break;
             case PROGRESSION:
-                Progression.prgGame(scanner);
+                Progression.prgGame();
                 break;
             case PRIME:
-                Prime.primeGame(scanner);
+                Prime.primeGame();
                 break;
             case EXIT:
                 System.out.println("Goodbye!");
                 break;
             default:
-                System.out.println("Wrong number, Darling. Try again!");
+                System.out.println("Unknown user choice " + userChoice);
         }
 
         scanner.close();

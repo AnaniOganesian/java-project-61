@@ -10,8 +10,9 @@ public class Prime {
     @SuppressWarnings("MagicNumber")
     private static final int MAX_NUMBER = 100;
     private static final int PRIME_CHECK_MIN_NUMBER = 3;
-    public static void primeGame(Scanner scanner) {
-        Engine engine = new Engine(scanner, "Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+
+    public static void primeGame() {
+        Engine engine = new Engine( "Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         engine.greeting();
 
         Random random = new Random();

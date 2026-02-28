@@ -10,8 +10,8 @@ public class GCD {
     @SuppressWarnings("MagicNumber")
     private static final int MAX_NUMBER = 100;
 
-    public static void nodGame(Scanner scanner) {
-        Engine engine = new Engine(scanner, "Find the greatest common divisor of given numbers.");
+    public static void nodGame() {
+        Engine engine = new Engine( "Find the greatest common divisor of given numbers.");
         engine.greeting();
 
         Random random = new Random();
