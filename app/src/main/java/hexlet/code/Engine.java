@@ -12,7 +12,6 @@ public final class Engine {
 
     public Engine(String description) {
         this.gameDescription = description;
-
     }
     public int getNoOfRounds() {
         return NUMBER_OF_ROUNDS;
@@ -20,35 +19,45 @@ public final class Engine {
     public String getPlayerName() {
         return playerName;
     }
-
+    // приветствие
     public void greeting() {
         //System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
         // Ввод имени
         this.playerName = scanner.nextLine().trim();
-
         System.out.println("Hello, " + playerName + "!");
+    }
+
+// Корректировки по замечаниям. Игра ничего не выводит на экран. Движок заполняет двумерный массив
+
+    public void runGame(String[][] games) {
         System.out.println(gameDescription);
 
-    }
-// Задаем основную логику игры. Задается вопрос, принимается ответ. Если ответ правильный, то увеличиваем
-// счечик. Если нет, то заканчиваем игру.
-    public boolean getQuestions(String question, String answer) {
-        System.out.println("Question: " + question);
-        System.out.print("Your answer: ");
-        String userAnswer = scanner.nextLine().trim().toLowerCase();
+        for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
+            String question = games[i][0];
+            String correctAnswer = games[i][1];
 
-        if (userAnswer.equals(answer)) {
-            System.out.println("Correct!");
-            return true;
-        } else {
-            System.out.println("'" + userAnswer + "' is wrong answer ;(. " + "Correct answer was '"
-                    + answer + "'.");
-            System.out.println("Let's try again, " + playerName + "!");
-            return false;
+            System.out.println("Question: " + question);
+            System.out.print("Your answer: ");
+            String userAnswer = scanner.nextLine().toLowerCase();
+
+            if (userAnswer.equals(correctAnswer)) {
+                System.out.println("Correct!");
+            } else {
+                System.out.println("'" + userAnswer + "' is wrong answer ;(. " + "Correct answer was '"
+                        + correctAnswer + "'.");
+                System.out.println("Let's try again, " + playerName + "!");
+                return;
+            }
+
         }
 
+        System.out.println("Congratulations, " + playerName + "!");
 
     }
-}
 
+
+
+
+
+}

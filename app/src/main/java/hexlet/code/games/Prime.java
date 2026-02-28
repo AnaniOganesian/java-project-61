@@ -1,39 +1,38 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
 import java.util.Random;
-import java.util.Scanner;
 
 public class Prime {
     // задался максимальным числом, чтобы было проще
     @SuppressWarnings("MagicNumber")
     private static final int MAX_NUMBER = 100;
     private static final int PRIME_CHECK_MIN_NUMBER = 3;
+    private static final int ROUNDS = 3;
+    private static final Random RANDOM = new Random();
 
     public static void primeGame() {
-        Engine engine = new Engine( "Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+        Engine engine = new Engine("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         engine.greeting();
 
-        Random random = new Random();
+        String[][] gameData = gameFilling();
+        engine.runGame(gameData);
+    }
 
-        int noOfCorrectAnswers = 0;
+    public static String[][] gameFilling() {
+        String[][] gameDataFull = new String[ROUNDS][2];
 
-        while (noOfCorrectAnswers < engine.getNoOfRounds()) {
-            int number = random.nextInt(MAX_NUMBER);
+        for (var i = 0; i < ROUNDS; i++) {
+            int number = RANDOM.nextInt(MAX_NUMBER);
 
             String question = String.valueOf(number);
             String correctAnswer = isPrime(number) ? "yes" : "no";
 
-            if (engine.getQuestions(question, correctAnswer)) {
-                noOfCorrectAnswers++;
-            } else {
-                return;
-            }
+            gameDataFull[i][0] = question;
+            gameDataFull[i][1] = correctAnswer;
 
         }
-        System.out.println("Congratulations, " + engine.getPlayerName() + "!");
-
+        return gameDataFull;
 
     }
 

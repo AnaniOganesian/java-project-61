@@ -1,37 +1,37 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
 import java.util.Random;
-import java.util.Scanner;
 
 public class GCD {
     // задался максимальным числом, чтобы было проще
     @SuppressWarnings("MagicNumber")
     private static final int MAX_NUMBER = 100;
+    private static final int ROUNDS = 3;
+    private static final Random RANDOM = new Random();
 
     public static void nodGame() {
-        Engine engine = new Engine( "Find the greatest common divisor of given numbers.");
+        Engine engine = new Engine("Find the greatest common divisor of given numbers.");
         engine.greeting();
 
-        Random random = new Random();
+        String[][] gameData = gameFilling();
+        engine.runGame(gameData);
+    }
 
-        int noOfCorrectAnswers = 0;
-        while (noOfCorrectAnswers < engine.getNoOfRounds()) {
-            int firstNumber = random.nextInt(MAX_NUMBER);
-            int secondNumber = random.nextInt(MAX_NUMBER);
+    public static String[][] gameFilling() {
+        String[][] gameDataFull = new String[ROUNDS][2];
+        for (int i = 0; i < ROUNDS; i++) {
+            int firstNumber = RANDOM.nextInt(MAX_NUMBER);
+            int secondNumber = RANDOM.nextInt(MAX_NUMBER);
 
             String question = firstNumber + " " + secondNumber;
-            int result = findNod(firstNumber, secondNumber);
+            int correctAnswer = findNod(firstNumber, secondNumber);
 
-            if (engine.getQuestions(question, String.valueOf(result))) {
-                noOfCorrectAnswers++;
-            } else {
-                return;
-            }
+            gameDataFull[i][0] = question;
+            gameDataFull[i][1] = String.valueOf(correctAnswer);
 
         }
-        System.out.println("Congratulations, " + engine.getPlayerName() + "!");
+        return gameDataFull;
     }
 
     private static int findNod(int firstNumber, int secondNumber) {
