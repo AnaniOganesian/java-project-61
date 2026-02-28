@@ -7,7 +7,6 @@ public class Prime {
     // задался максимальным числом, чтобы было проще
     @SuppressWarnings("MagicNumber")
     private static final int MAX_NUMBER = 100;
-    private static final int PRIME_CHECK_MIN_NUMBER = 3;
     private static final int ROUNDS = 3;
     private static final Random RANDOM = new Random();
 
@@ -52,7 +51,9 @@ public class Prime {
 
         int sqrt = (int) Math.sqrt(number);
 
-        for (int i = PRIME_CHECK_MIN_NUMBER; i <= sqrt; i += 2) {
+        final int PRIME_MIN_NUMBER = 3;
+
+        for (int i = PRIME_MIN_NUMBER ; i <= sqrt; i += 2) {
             if (number % i == 0) {
                 return false;
             }
