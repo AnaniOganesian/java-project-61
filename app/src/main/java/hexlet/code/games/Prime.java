@@ -51,9 +51,9 @@ public class Prime {
 
         int sqrt = (int) Math.sqrt(number);
 
-        final int PRIME_MIN_NUMBER = 3;
+        final int primeMinNumber = 3;
 
-        for (int i = PRIME_MIN_NUMBER ; i <= sqrt; i += 2) {
+        for (int i = primeMinNumber; i <= sqrt; i += 2) {
             if (number % i == 0) {
                 return false;
             }
