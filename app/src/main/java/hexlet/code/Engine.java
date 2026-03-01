@@ -6,7 +6,7 @@ public final class Engine {
     @SuppressWarnings("MagicNumber")
     private static final int NUMBER_OF_ROUNDS = 3;
     private final Scanner scanner = new Scanner(System.in);
-    public String playerName;
+    private String playerName;
     private final String gameDescription;
 
     public Engine(String description) {
@@ -15,7 +15,9 @@ public final class Engine {
 
 /*    public int getNoOfRounds() { return NUMBER_OF_ROUNDS; } */
 
-/*    public String getPlayerName() { return playerName; } */
+    public String getPlayerName() {
+        return playerName;
+    }
 
     public void runGame(String[][] games) {
         // Greeting
@@ -47,9 +49,5 @@ public final class Engine {
         System.out.println("Congratulations, " + playerName + "!");
 
     }
-
-
-
-
 
 }
