@@ -6,31 +6,23 @@ public final class Engine {
     @SuppressWarnings("MagicNumber")
     private static final int NUMBER_OF_ROUNDS = 3;
     private final Scanner scanner = new Scanner(System.in);
-    private String playerName;
+    public String playerName;
     private final String gameDescription;
-    //private int noOfCorrectAnswers = 0;
 
     public Engine(String description) {
         this.gameDescription = description;
     }
-    public int getNoOfRounds() {
-        return NUMBER_OF_ROUNDS;
-    }
-    public String getPlayerName() {
-        return playerName;
-    }
-    // приветствие
-    public void greeting() {
-        //System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name? ");
-        // Ввод имени
-        this.playerName = scanner.nextLine().trim();
-        System.out.println("Hello, " + playerName + "!");
-    }
 
-// Корректировки по замечаниям. Игра ничего не выводит на экран. Движок заполняет двумерный массив
+/*    public int getNoOfRounds() { return NUMBER_OF_ROUNDS; } */
+
+/*    public String getPlayerName() { return playerName; } */
 
     public void runGame(String[][] games) {
+        // Greeting
+        System.out.print("May I have your name? ");
+        playerName = scanner.nextLine().trim();
+        System.out.println("Hello, " + playerName + "!");
+        // Game itself
         System.out.println(gameDescription);
 
         for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {

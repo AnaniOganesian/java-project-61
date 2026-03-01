@@ -12,8 +12,6 @@ public class Prime {
 
     public static void primeGame() {
         Engine engine = new Engine("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-        engine.greeting();
-
         String[][] gameData = gameFilling();
         engine.runGame(gameData);
     }

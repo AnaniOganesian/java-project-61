@@ -12,8 +12,6 @@ public class GCD {
 
     public static void nodGame() {
         Engine engine = new Engine("Find the greatest common divisor of given numbers.");
-        engine.greeting();
-
         String[][] gameData = gameFilling();
         engine.runGame(gameData);
     }

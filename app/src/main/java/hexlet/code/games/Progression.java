@@ -17,7 +17,6 @@ public class Progression {
 
     public static void prgGame() {
         Engine engine = new Engine("What number is missing in the progression?");
-        engine.greeting();
         String[][] gameData = gspGameFilling();
         engine.runGame(gameData);
     }

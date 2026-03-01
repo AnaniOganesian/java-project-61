@@ -11,13 +11,9 @@ public class Even {
     private static final Random RANDOM = new Random();
 
     public static void evenGame() {
-
         Engine engine = new Engine("Answer 'yes' if the number is even, otherwise answer 'no'.");
-        engine.greeting();
-
         String[][] gameData = gameFilling();
         engine.runGame(gameData);
-
     }
 
     public static String[][] gameFilling() {

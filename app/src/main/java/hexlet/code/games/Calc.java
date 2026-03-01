@@ -13,9 +13,6 @@ public class Calc {
 
     public static void calcGame() {
         Engine engine = new Engine("What is the result of the expression?");
-        // задался максимальным числом, чтобы было проще
-        engine.greeting();
-
         String[][] gameData = gameFilling();
         engine.runGame(gameData);
     }
