@@ -7,18 +7,19 @@ public class Even {
     // задался максимальным числом, чтобы было проще
     @SuppressWarnings("MagicNumber")
     private static final int MAX_NUMBER = 100;
-    private static final int ROUNDS = 3;
+    //private static final int ROUNDS = 3;
     private static final Random RANDOM = new Random();
 
     public static void evenGame() {
-        Engine engine = new Engine("Answer 'yes' if the number is even, otherwise answer 'no'.");
+        //Engine engine = new Engine("Answer 'yes' if the number is even, otherwise answer 'no'.");
         String[][] gameData = gameFilling();
-        engine.runGame(gameData);
+        Engine.runGame("Answer 'yes' if the number is even, otherwise answer 'no'.", gameData);
     }
 
     public static String[][] gameFilling() {
-        String[][] gameDataFull = new String[ROUNDS][2];
-        for (int i = 0; i < ROUNDS; i++) {
+        int rounds = Engine.getNumberOfRounds();
+        String[][] gameDataFull = new String[rounds][2];
+        for (int i = 0; i < rounds; i++) {
             int number = RANDOM.nextInt(MAX_NUMBER) + 1;  //
             String question = String.valueOf(number);
             String correctAnswer = isEven(number) ? "yes" : "no";

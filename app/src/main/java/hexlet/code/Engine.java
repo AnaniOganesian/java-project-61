@@ -5,35 +5,41 @@ import java.util.Scanner;
 public final class Engine {
     @SuppressWarnings("MagicNumber")
     private static final int NUMBER_OF_ROUNDS = 3;
-    private final Scanner scanner = new Scanner(System.in);
-    private String playerName;
-    private final String gameDescription;
+    private static final Scanner SCANNER = new Scanner(System.in);
+    // private static String playerName;
+    //private static String gameDescription;
+    //private static String[][] games;
 
-    public Engine(String description) {
+/*    public Engine(String description, String[][] gamesData) {
         this.gameDescription = description;
+        this.games = gamesData;
     }
 
-/*    public int getNoOfRounds() { return NUMBER_OF_ROUNDS; } */
+
+   public int getNoOfRounds() { return NUMBER_OF_ROUNDS; }
 
     public String getPlayerName() {
         return playerName;
+    } */
+    public static int getNumberOfRounds() {
+        return NUMBER_OF_ROUNDS;
     }
 
-    public void runGame(String[][] games) {
+    public static void runGame(String description, String[][] gamesData) {
         // Greeting
         System.out.print("May I have your name? ");
-        playerName = scanner.nextLine().trim();
+        String playerName = SCANNER.nextLine().trim();
         System.out.println("Hello, " + playerName + "!");
         // Game itself
-        System.out.println(gameDescription);
+        System.out.println(description);
 
         for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
-            String question = games[i][0];
-            String correctAnswer = games[i][1];
+            String question = gamesData[i][0];
+            String correctAnswer = gamesData[i][1];
 
             System.out.println("Question: " + question);
             System.out.print("Your answer: ");
-            String userAnswer = scanner.nextLine().toLowerCase();
+            String userAnswer = SCANNER.nextLine().toLowerCase();
 
             if (userAnswer.equals(correctAnswer)) {
                 System.out.println("Correct!");

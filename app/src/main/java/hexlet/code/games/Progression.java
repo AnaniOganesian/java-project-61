@@ -11,20 +11,21 @@ public class Progression {
     private static final int MIN_PRG_LENGTH = 5;
     // задался максимумом равным 10 по условию задачи
     private static final int MAX_PRG_LENGTH = 10;
-    private static final int ROUNDS = 3;
+    //private static final int ROUNDS = 3;
     private static final int MAX_NUMBER = 100;
 
 
     public static void prgGame() {
-        Engine engine = new Engine("What number is missing in the progression?");
+        //Engine engine = new Engine("What number is missing in the progression?");
         String[][] gameData = gspGameFilling();
-        engine.runGame(gameData);
+        Engine.runGame("What number is missing in the progression?", gameData);
     }
 
     public static String[][] gspGameFilling() {
-        String[][] dataGameFill = new String[ROUNDS][2];
+        int rounds = Engine.getNumberOfRounds();
+        String[][] dataGameFill = new String[rounds][2];
 
-        for (int i = 0; i < ROUNDS; i++) {
+        for (int i = 0; i < rounds; i++) {
             int length = RANDOM_NUMBER.nextInt(MAX_PRG_LENGTH - MIN_PRG_LENGTH + 1)
                     + MIN_PRG_LENGTH;
             int hiddenIndex = RANDOM_NUMBER.nextInt(length - 1) + 1;

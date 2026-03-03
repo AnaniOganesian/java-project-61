@@ -9,19 +9,22 @@ public class Calc {
     // задался максимальным числом, чтобы было проще
     private static final int MAX_NUMBER = 100;
     private static final Random RANDOM = new Random();
-    private static final int ROUNDS = 3;
+    //private static final int ROUNDS = 3;
 
     public static void calcGame() {
-        Engine engine = new Engine("What is the result of the expression?");
+        // Engine engine = new Engine("What is the result of the expression?");
         String[][] gameData = gameFilling();
-        engine.runGame(gameData);
+        //engine.runGame(gameData);
+        Engine.runGame("What is the result of the expression?", gameData);
+
     }
 
     public static String[][] gameFilling() {
-        String[][] gameDataFull = new String[ROUNDS][2];
+        int rounds = Engine.getNumberOfRounds();
+        String[][] gameDataFull = new String[rounds][2];
         String[] mathOper = {"+", "-", "*"};
 
-        for (int i = 0; i < ROUNDS; i++) {
+        for (int i = 0; i < rounds; i++) {
             int firstNumber = RANDOM.nextInt(MAX_NUMBER) + 1;
             int secondNumber = RANDOM.nextInt(MAX_NUMBER) + 1;
             int operationNumber = RANDOM.nextInt(2) + 1;
@@ -43,7 +46,7 @@ public class Calc {
             case "+" -> one + two;
             case "-" -> one - two;
             case "*" -> one * two;
-            default -> throw new RuntimeException("Unknown state");
+            default -> throw new RuntimeException("Unknown user input" + operation);
         };
     }
 

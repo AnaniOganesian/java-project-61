@@ -7,19 +7,20 @@ public class Prime {
     // задался максимальным числом, чтобы было проще
     @SuppressWarnings("MagicNumber")
     private static final int MAX_NUMBER = 100;
-    private static final int ROUNDS = 3;
+    // private static final int ROUNDS = 3;
     private static final Random RANDOM = new Random();
 
     public static void primeGame() {
-        Engine engine = new Engine("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+        //Engine engine = new Engine("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         String[][] gameData = gameFilling();
-        engine.runGame(gameData);
+        Engine.runGame("Answer 'yes' if given number is prime. Otherwise answer 'no'.", gameData);
     }
 
     public static String[][] gameFilling() {
-        String[][] gameDataFull = new String[ROUNDS][2];
+        int rounds = Engine.getNumberOfRounds();
+        String[][] gameDataFull = new String[rounds][2];
 
-        for (var i = 0; i < ROUNDS; i++) {
+        for (var i = 0; i < rounds; i++) {
             int number = RANDOM.nextInt(MAX_NUMBER);
 
             String question = String.valueOf(number);

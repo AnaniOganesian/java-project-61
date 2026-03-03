@@ -7,18 +7,19 @@ public class GCD {
     // задался максимальным числом, чтобы было проще
     @SuppressWarnings("MagicNumber")
     private static final int MAX_NUMBER = 100;
-    private static final int ROUNDS = 3;
+    //private static final int ROUNDS = 3;
     private static final Random RANDOM = new Random();
 
     public static void nodGame() {
-        Engine engine = new Engine("Find the greatest common divisor of given numbers.");
+        //Engine engine = new Engine("Find the greatest common divisor of given numbers.");
         String[][] gameData = gameFilling();
-        engine.runGame(gameData);
+        Engine.runGame("Find the greatest common divisor of given numbers.", gameData);
     }
 
     public static String[][] gameFilling() {
-        String[][] gameDataFull = new String[ROUNDS][2];
-        for (int i = 0; i < ROUNDS; i++) {
+        int rounds = Engine.getNumberOfRounds();
+        String[][] gameDataFull = new String[rounds][2];
+        for (int i = 0; i < rounds; i++) {
             int firstNumber = RANDOM.nextInt(MAX_NUMBER);
             int secondNumber = RANDOM.nextInt(MAX_NUMBER);
 
