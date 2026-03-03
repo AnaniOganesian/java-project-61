@@ -33,9 +33,12 @@ public final class Engine {
         // Game itself
         System.out.println(description);
 
-        for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
-            String question = gamesData[i][0];
-            String correctAnswer = gamesData[i][1];
+        //for (int i = 0; i < NUMBER_OF_ROUNDS; i++)
+        for (String[] game : gamesData) {
+            String question = game[0];
+            String correctAnswer = game[1];
+            //String question = gamesData[i][0];
+            // String correctAnswer = gamesData[i][1];
 
             System.out.println("Question: " + question);
             System.out.print("Your answer: ");
